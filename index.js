@@ -15,15 +15,24 @@ function logWhisper(string) {
 }
 
 function  sayHiToHeadphonedRoommate(string) {
+    
+    const upper = "YES INDEED!";
+    const lower = "I can\'t hear you!";
+    const dinner = "I would love to!";
+    let greeting; 
+
     switch(string) {
-        case string.toLowerCase():
-            console.log("I can\'t hear you!");
-            break;
         case string.toUpperCase():
-            console.log("YES INDEED!");
+            greeting = upper;
+            break;
+        case string.toLowerCase():
+            greeting = lower;
             break;
         case "Let's have dinner together!":
-            console.log("I would love to!");
+            greeting = dinner;
             break;
-    }    
+    } 
+
+    console.log(greeting);
+    return (greeting);
 }
